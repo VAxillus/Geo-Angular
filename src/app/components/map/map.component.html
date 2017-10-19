@@ -1,0 +1,30 @@
+<div class="background-image">
+  <div class="wrapper">
+    <div class="menu">
+      <h1> Geo APP! </h1>
+      <nav>
+        <ul>
+          <li class="navigation"><a [routerLink] = "['/']">Home</a></li>
+          <li class="navigation"><a [routerLink] = "['/about']">About</a></li>
+          <li class="navigation active"><a [routerLink] = "['/map']">Commercials</a></li>
+          <li class="navigation"><a [routerLink] = "['/submit']">Submit Advertisement</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="page">
+      <div class="article">
+        <div class="commercialListDiv">
+          <ul>
+            <li *ngFor="let commercial of commercials">
+              <p class="article-text">
+                {{commercial.company}}
+                {{commercial.startDate}}
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div id="map"></div>
+      </div>
+    </div>
+  </div>
+</div>
